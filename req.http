@@ -2,7 +2,17 @@
 #@baseUrl = http://localhost:7071/api
 @baseUrl = https://afs-simple-function.azurewebsites.net/api
 
-get {{baseUrl}}/get-all
+get {{baseUrl}}/user
+
+###
+get {{baseUrl}}/user/1
 
 
+###
+post {{baseUrl}}/user
 
+{
+    "id": "3",
+    "name": "Irina Pavelkowa",
+    "email": "ip@cz.cz"
+}

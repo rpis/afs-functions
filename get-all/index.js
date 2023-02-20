@@ -1,16 +1,14 @@
-const response = [{
-    "id": 1,
-    "name": "John Doe",
-    "email": "john.doe@wp.pl"
-},{
-    "id": 2,
-    "name": "Katerina Pavelkova",
-    "email": "k.pav@nevi.cz"
-}]
+const { TableClient } = require("@azure/data-tables");
 
+const tableClient = new TableClient(process.env.TABLE_CONNECTION_STRING, "users");
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
-    context.log('Response: ' + JSON.stringify(response));
+
+    const entities = await tableClient.listEntities();
+    var response = [];
+    for await (const ent of entities) {
+        response.push(ent);
+    }
     context.res = {
         status: 200, /* Defaults to 200 */
         body: response
