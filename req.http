@@ -12,7 +12,7 @@ get {{baseUrl}}/user/1
 post {{baseUrl}}/user
 
 {
-    "id": "3",
+    "id": "4",
     "name": "Irina Pavelkowa",
     "email": "ip@cz.cz"
 }
