@@ -1,6 +1,6 @@
 
-#@baseUrl = http://localhost:7071/api
-@baseUrl = https://afs-simple-function.azurewebsites.net/api
+@baseUrl = http://localhost:7071/api
+#@baseUrl = https://afs-simple-function.azurewebsites.net/api
 
 get {{baseUrl}}/user
 
@@ -12,7 +12,7 @@ get {{baseUrl}}/user/1
 post {{baseUrl}}/user
 
 {
-    "id": "4",
+    "id": "5",
     "name": "Irina Pavelkowa",
     "email": "ip@cz.cz"
 }
