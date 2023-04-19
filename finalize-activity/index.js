@@ -9,6 +9,7 @@ module.exports = async function (context) {
     console.log("Processing id:"+context.bindings.name.id);
     var entity = await tableClient.getEntity(context.bindings.name.id,context.bindings.name.id);
     entity.status = "ACTIVE"
-    await tableClient.updateEntity(entity);
+    await tableClient.updateEntity(entity); 
+    context.bindings.outputQueueItem = JSON.stringify(entity);
     return "Finalize executed";
 };

@@ -4,6 +4,13 @@
       "name": "name",
       "type": "activityTrigger",
       "direction": "in"
+    },
+    {
+      "type": "queue",
+      "direction": "out",
+      "name": "outputQueueItem",
+      "queueName": "on-boarding-completed",
+      "connection": "AZ"
     }
   ]
 }

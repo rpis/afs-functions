@@ -15,8 +15,12 @@
   "extensions": {
     "durableTask": {
       "storageProvider": {
-        "connectionName":  "AzureWebJobsStorage"
+        "connectionName": "AzureWebJobsStorage"
       }
     }
+  },
+  "concurrency": {
+    "dynamicConcurrencyEnabled": true,
+    "snapshotPersistenceEnabled": true
   }
 }
