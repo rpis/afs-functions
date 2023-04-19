@@ -12,7 +12,20 @@ get {{baseUrl}}/user/1
 post {{baseUrl}}/user
 
 {
-    "id": "5",
+    "id": "7",
     "name": "Irina Pavelkowa",
     "email": "ip@cz.cz"
 }
+
+###
+
+post http://localhost:7071/runtime/webhooks/durabletask/orchestrators/on-boarding-orchestrator/
+
+{
+    "id": "7"
+}
+
+###
+
+GET http://localhost:7071/runtime/webhooks/durabletask/instances/04eef035e0d74eb2afe3722251d619dd
+
